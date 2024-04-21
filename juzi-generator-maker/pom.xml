@@ -4,9 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.juzipi.basic</groupId>
-    <artifactId>juzi-generator-basic</artifactId>
+    <groupId>com.juzipi.maker</groupId>
+    <artifactId>juzi-generator-maker</artifactId>
     <version>1.0-SNAPSHOT</version>
+
 
     <dependencies>
         <!-- https://picocli.info -->
@@ -60,7 +61,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.juzipi.basic.Main</mainClass> <!-- 替换为你的主类的完整类名 -->
+                            <mainClass>com.juzipi.maker.Main</mainClass> <!-- 替换为你的主类的完整类名 -->
                         </manifest>
                     </archive>
                 </configuration>

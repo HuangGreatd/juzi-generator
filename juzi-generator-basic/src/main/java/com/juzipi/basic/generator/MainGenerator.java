@@ -7,24 +7,42 @@ import java.io.File;
 import java.io.IOException;
 
 /**
+ * 核心代码生成器
+ *
  * @author juzipi
  * @date 2024/4/19 20:58
  */
 public class MainGenerator {
 
+    /**
+     * 生成
+     *
+     * @param model
+     * @throws TemplateException
+     * @throws IOException
+     */
     public static void doGenerate(Object model) throws TemplateException, IOException {
-        String projectPath = System.getProperty("user.dir");
+        String inputRootPath = "D:\\code\\mycode\\juzi-generator\\juzi-generator-demo-projects\\acm-template-pro";
+        String outputRootPath = "D:\\code\\mycode\\juzi-generator\\\\acm-template-pro";
 
-        File parentFile = new File(projectPath).getParentFile();
 
-        String inputPath = new File(parentFile, "juzi-generator-demo-projects/acm-template").getAbsolutePath();
-        String outputPath = projectPath;
+        String inputPath;
+        String outputPath;
 
-        StaticGenerator.copyFilesByRecursive(inputPath,outputPath);
 
-        String inputDynamicFilePath = projectPath + File.separator + "src/main/resources/templates/MainTemplate.java.ftl";
-        String outputDynamicFilePath = outputPath + File.separator + "acm-template/src/com/juzipi/acm/MainTemplate.java";
-        DynamicGenerator.doGenerate(inputDynamicFilePath,outputDynamicFilePath,model);
+        inputPath = new File(inputRootPath, "src/com/juzipi/acm/MainTemplate.java.ftl").getAbsolutePath();
+        outputPath = new File(outputRootPath, "src/com/juzipi/acm/MainTemplate.java").getAbsolutePath();
+        DynamicGenerator.doGenerate(inputPath, outputPath, model);
+
+
+        inputPath = new File(inputRootPath, ".gitignore").getAbsolutePath();
+        outputPath = new File(outputRootPath, ".gitignore").getAbsolutePath();
+        StaticGenerator.copyFilesByHutool(inputPath, outputPath);
+
+        inputPath = new File(inputRootPath, "README.md").getAbsolutePath();
+        outputPath = new File(outputRootPath, "README.md").getAbsolutePath();
+        StaticGenerator.copyFilesByHutool(inputPath, outputPath);
+
 
 
     }

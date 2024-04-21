@@ -1,14 +1,8 @@
-package com.juzipi.basic;
+package com.juzipi.maker;
 
-import com.juzipi.basic.cli.CommandExecutor;
-import com.juzipi.basic.model.MainTemplateConfig;
 import freemarker.template.TemplateException;
 
-import java.io.File;
 import java.io.IOException;
-
-import static com.juzipi.basic.generator.DynamicGenerator.doGenerate;
-import static com.juzipi.basic.generator.StaticGenerator.copyFilesByHutool;
 
 /**
  * @author juzipi
@@ -24,8 +18,6 @@ public class Main {
 //        mainTemplateConfig.setLoop(false);
 //        mainTemplateConfig.setOutputText("求和结果：");
 //        doGenerate(inputPath, outputPath, mainTemplateConfig);
-        CommandExecutor commandExecutor = new CommandExecutor();
-        commandExecutor.doExecute(args);
 
     }
 }
