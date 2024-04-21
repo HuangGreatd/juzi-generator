@@ -135,9 +135,9 @@ public abstract class GenerateTemplate {
         DynamicFileGenerator.doGenerate(inputFilePath , outputFilePath, meta);
 
         // README.md
-        inputFilePath = inputResourcePath + File.separator + "templates/README.md.ftl";
-        outputFilePath = outputPath + File.separator + "README.md";
-        DynamicFileGenerator.doGenerate(inputFilePath , outputFilePath, meta);
+//        inputFilePath = inputResourcePath + File.separator + "templates/README.md.ftl";
+//        outputFilePath = outputPath + File.separator + "README.md";
+//        DynamicFileGenerator.doGenerate(inputFilePath , outputFilePath, meta);
     }
 
 
