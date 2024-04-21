@@ -6,8 +6,9 @@
   "author": "juzipi",
   "createTime": "2024-04-21",
   "fileConfig": {
-    "inputRootPath": "D:/code/mycode/juzi-generator/juzi-generator-demo-projects/acm-template-pro",
-    "outputRootPath": "generated",
+    "inputRootPath": "./source/acm-template-pro",
+    "outputRootPath": "D:/code/mycode/juzi-generator/acm-template-pro",
+    "sourceRootPath": "D:/code/mycode/juzi-generator/juzi-generator-demo-projects/acm-template-pro",
     "type": "dir",
     "files": [
       {

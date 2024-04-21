@@ -30,6 +30,7 @@ public class MetaManager {
         Meta newMeta = JSONUtil.toBean(metaJson, Meta.class);
         Meta.FileConfig fileConfig = newMeta.getFileConfig();
         // todo 校验和处理默认值
+        MetaValidator.doVaildAndFill(newMeta);
         return newMeta;
     }
 }
