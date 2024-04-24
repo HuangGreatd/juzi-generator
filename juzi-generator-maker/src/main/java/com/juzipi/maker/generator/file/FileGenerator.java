@@ -1,6 +1,5 @@
 package com.juzipi.maker.generator.file;
 
-import com.juzipi.maker.model.DataModel;
 import freemarker.template.TemplateException;
 
 import java.io.File;
@@ -29,11 +28,4 @@ public class FileGenerator {
 
     }
 
-    public static void main(String[] args) throws TemplateException, IOException {
-        DataModel dataModel = new DataModel();
-        dataModel.setAuthor("yupi");
-        dataModel.setLoop(false);
-        dataModel.setOutputText("求和结果：");
-        doGenerate(dataModel);
-    }
 }
